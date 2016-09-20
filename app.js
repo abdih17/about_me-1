@@ -1,21 +1,16 @@
+'use strict';
 
+var question1 = prompt('Guess the answer to Question 1').toLowerCase();
 
-var username = prompt('What\'s your name?');
-alert('Welcome, ' + username + '!');
-console.log('The user\'s name is ' + username);
-document.write(username);
+while (question1 != 'yes' && question1 != 'y' && question1 != 'no' && question1 != 'n') {
+  console.log(question1);
+  alert('Please input Yes\(Y\) or No \(N\) \(not case sensitive\)');
+  question1 = prompt('Guess the answer to Question 1').toLowerCase();
+}
 
-var daddy = prompt('Who\'s your daddy?');
-alert(daddy + ' is your daddy!? Wow, ' + username + '!!');
-console.log(daddy + ' is the users daddy.');
-document.write(daddy);
-
-var rich = prompt('Is he rich like me?');
-alert('Is ' + daddy + ' rich? ' + rich + '? That\'s amazing, ' + username + '!!!');
-console.log('Is ' + daddy + ' rich? ' + rich);
-document.write(rich);
-
-var takenTime = prompt('Has he taken any time to show you what you need to live?');
-alert(takenTime + ', eh? Cool, ' + username + '. Sounds like your daddy ' + daddy + ' is really awesome because when I asked you if he was rich you said: ' + rich + '!');
-console.log('Has ' + daddy + ' taken any time to show you what you need to live: ' + takenTime);
-document.write(takenTime);
+if (question1 === 'yes' || question1 === 'y') {
+  alert('Yes that is true');
+} else if (question1 === 'no' || question1 === 'n') {
+  alert('Actually...');
+};
+console.log('Guessed ' + question1 + ' to Question 1');

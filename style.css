@@ -8,9 +8,21 @@ a {
 		color: yellow;
 }
 
+p {
+	color: #999999;
+}
+
+h1 {
+	color:#ff66ff;
+}
+
 h2, h3, h4, h5, h6 {
   margin-top:0em;
   margin-bottom:0em;
+}
+
+h3, h4, h5, h6 {
+	color: #bfbfbf;
 }
 
 img {
@@ -18,4 +30,9 @@ img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+
+ul {
+    list-style-position: inside;
+		color: #999999;
 }

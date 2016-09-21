@@ -1,3 +1,12 @@
-* {
-  color: red;
+body
+{
+	color: white;
+	background-color: black;
+}
+
+img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }

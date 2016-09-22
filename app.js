@@ -105,61 +105,63 @@ function quest5 () {
 quest5();
 
 // QUESTION 6
+function quest6 () {
+  var randomNumber = Math.round((Math.random() * 100));
+  console.log('The random number is ' + randomNumber);
+  var numberGuess = parseInt(prompt('Ok, now guess a number between 0-100.'));
+  console.log(username + ' guessed the number ' + numberGuess);
 
-var randomNumber = Math.round((Math.random() * 100));
-console.log('The random number is ' + randomNumber);
-var numberGuess = parseInt(prompt('Ok, now guess a number between 0-100.'));
-console.log(username + ' guessed the number ' + numberGuess);
+  while (isNaN(numberGuess)) {
+    console.log(username + '\'s input \"' + numberGuess + '\" was invalid (not a number)');
+    numberGuess = parseInt(prompt('Guess a number between 0-100.'));
+  }
 
-while (isNaN(numberGuess)) {
-  console.log(username + '\'s input \"' + numberGuess + '\" was invalid (not a number)');
-  numberGuess = parseInt(prompt('Guess a number between 0-100.'));
+  if (numberGuess > randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (3 attempts left)'));
+  } else if (numberGuess < randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (3 attempts left)'));
+  } else if (numberGuess === randomNumber){
+    alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
+  } else {
+    alert('Really...');
+  }
+
+  if (numberGuess > randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (2 attempts left)'));
+  } else if (numberGuess < randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (2 attempts left)'));
+  } else if (numberGuess === randomNumber){
+    alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
+  } else {
+    alert('Really...');
+  }
+
+  if (numberGuess > randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (This is your last chance)'));
+  } else if (numberGuess < randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
+    numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (This is your last chance)'));
+  } else if (numberGuess === randomNumber){
+    alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
+  } else {
+    alert('Really...');
+  }
+
+  if (numberGuess > randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
+    alert('Sorry, your number was too high. The number was ' + randomNumber + '! Better luck next time!');
+  } else if (numberGuess < randomNumber) {
+    console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
+    alert('Sorry, your number was too low. The number was ' + randomNumber + '! Better luck next time!');
+  } else if (numberGuess === randomNumber){
+    alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
+  } else {
+    alert('Really...');
+  }
 }
-
-if (numberGuess > randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (3 attempts left)'));
-} else if (numberGuess < randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (3 attempts left)'));
-} else if (numberGuess === randomNumber){
-  alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
-} else {
-  alert('Really...');
-}
-
-if (numberGuess > randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (2 attempts left)'));
-} else if (numberGuess < randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (2 attempts left)'));
-} else if (numberGuess === randomNumber){
-  alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
-} else {
-  alert('Really...');
-}
-
-if (numberGuess > randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too high, ' + username + '. Try again! (This is your last chance)'));
-} else if (numberGuess < randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
-  numberGuess = parseInt(prompt('Your number is too low, ' + username + '. Try again! (This is your last chance)'));
-} else if (numberGuess === randomNumber){
-  alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
-} else {
-  alert('Really...');
-}
-
-if (numberGuess > randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is higher than our number ' + randomNumber);
-  alert('Sorry, your number was too high. The number was ' + randomNumber + '! Better luck next time!');
-} else if (numberGuess < randomNumber) {
-  console.log(username + ' guessed the number ' + numberGuess + ' which is lower than our number ' + randomNumber);
-  alert('Sorry, your number was too low. The number was ' + randomNumber + '! Better luck next time!');
-} else if (numberGuess === randomNumber){
-  alert('Wow! You must be psychic! ' + randomNumber + ' was the number!');
-} else {
-  alert('Really...');
-}
+quest6();

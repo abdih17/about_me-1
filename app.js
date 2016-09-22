@@ -85,22 +85,24 @@ function quest4 () {
 quest4();
 
 // QUESTION 5
+function quest5 () {
+  var question5 = prompt('I\'ve never missed a Dave Mathews Band concert at the Gorge, in all of my adult life.').toLowerCase();
 
-var question5 = prompt('I\'ve never missed a Dave Mathews Band concert at the Gorge, in all of my adult life.').toLowerCase();
+  while (question5 !== 'yes' && question5 !== 'y' && question5 !== 'no' && question5 !== 'n' && question5 !== 'true' && question5 !== 'false' && question5 !== 't' && question5 !== 'f') {
+    console.log(username + '\'s input \"' + question5 + '\" was invalid for Question 5. Try again, ' + username + '.');
+    alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
+    question5 = prompt('I\'ve never missed a Dave Mathews Band concert at the Gorge, in all of my adult life.').toLowerCase();
+  }
 
-while (question5 !== 'yes' && question5 !== 'y' && question5 !== 'no' && question5 !== 'n' && question5 !== 'true' && question5 !== 'false' && question5 !== 't' && question5 !== 'f') {
-  console.log(username + '\'s input \"' + question5 + '\" was invalid for Question 5. Try again, ' + username + '.');
-  alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
-  question5 = prompt('I\'ve never missed a Dave Mathews Band concert at the Gorge, in all of my adult life.').toLowerCase();
+  if (question5 === 'yes' || question5 === 'y' || question5 === 'true' || question5 === 't') {
+    console.log(username + ' guessed \"' + question5 + '\" to Question 5 which is INCORRECT!');
+    alert('Wrong! I\'ve never been to a Dave Mathews Band concert, and I probably never will.');
+  } else if (question5 === 'no' || question5 === 'n' || question5 === 'false' || question5 === 'f') {
+    console.log(username + ' guessed \"' + question5 + '\" on Question 5 which is CORRECT!');
+    alert('Correct. I\'ve never been to a Dave Mathews Band concert, and I probably never will.');
+  };
 }
-
-if (question5 === 'yes' || question5 === 'y' || question5 === 'true' || question5 === 't') {
-  console.log(username + ' guessed \"' + question5 + '\" to Question 5 which is INCORRECT!');
-  alert('Wrong! I\'ve never been to a Dave Mathews Band concert, and I probably never will.');
-} else if (question5 === 'no' || question5 === 'n' || question5 === 'false' || question5 === 'f') {
-  console.log(username + ' guessed \"' + question5 + '\" on Question 5 which is CORRECT!');
-  alert('Correct. I\'ve never been to a Dave Mathews Band concert, and I probably never will.');
-};
+quest5();
 
 // QUESTION 6
 

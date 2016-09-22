@@ -5,21 +5,24 @@ alert('Hello, ' + username + '! Welcome to my \"About Me\" page! Let\'s play a q
 
 // QUESTION 1
 
-var question1 = prompt('My grandfather was a Puerto Rican CIA Field Agent who used to translate intercepted communications of Fidel Castro for the United States government.').toLowerCase();
+function quest1 () {
+  var question1 = prompt('My grandfather was a Puerto Rican CIA Field Agent who used to translate intercepted communications of Fidel Castro for the United States government.').toLowerCase();
 
-while (question1 !== 'yes' && question1 !== 'y' && question1 !== 'no' && question1 !== 'n' && question1 !== 'true' && question1 !== 'false' && question1 !== 't' && question1 !== 'f') {
-  console.log(username + '\'s input \"' + question1 + '\" was invalid for Question 1. Try again, ' + username + '.');
-  alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
-  question1 = prompt('My grandfather was a Puerto Rican CIA Field Agent who used to translate intercepted communications of Fidel Castro for the United States government.').toLowerCase();
+  while (question1 !== 'yes' && question1 !== 'y' && question1 !== 'no' && question1 !== 'n' && question1 !== 'true' && question1 !== 'false' && question1 !== 't' && question1 !== 'f') {
+    console.log(username + '\'s input \"' + question1 + '\" was invalid for Question 1. Try again, ' + username + '.');
+    alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
+    question1 = prompt('My grandfather was a Puerto Rican CIA Field Agent who used to translate intercepted communications of Fidel Castro for the United States government.').toLowerCase();
+  }
+
+  if (question1 === 'yes' || question1 === 'y' || question1 === 'true' || question1 === 't') {
+    console.log(username + ' guessed \"' + question1 + '\" on Question 1 which is CORRECT!');
+    alert('Correct! My grandfather was like the Puerto Rican James Bond of NYC.');
+  } else if (question1 === 'no' || question1 === 'n' || question1 === 'false' || question1 === 'f') {
+    console.log(username + ' guessed \"' + question1 + '\" to Question 1 which is INCORRECT!');
+    alert('Actually, it\'s true. My grandfather was like the Puerto Rican James Bond of NYC.');
+  };
 }
-
-if (question1 === 'yes' || question1 === 'y' || question1 === 'true' || question1 === 't') {
-  console.log(username + ' guessed \"' + question1 + '\" on Question 1 which is CORRECT!');
-  alert('Correct! My grandfather was like the Puerto Rican James Bond of NYC.');
-} else if (question1 === 'no' || question1 === 'n' || question1 === 'false' || question1 === 'f') {
-  console.log(username + ' guessed \"' + question1 + '\" to Question 1 which is INCORRECT!');
-  alert('Actually, it\'s true. My grandfather was like the Puerto Rican James Bond of NYC.');
-};
+quest1();
 
 // QUESTION 2
 

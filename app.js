@@ -25,22 +25,24 @@ function quest1 () {
 quest1();
 
 // QUESTION 2
+function quest2 () {
+  var question2 = prompt('I spend a lot of my free time walking around the woods in the rain looking for things to eat.').toLowerCase();
 
-var question2 = prompt('I spend a lot of my free time walking around the woods in the rain looking for things to eat.').toLowerCase();
+  while (question2 !== 'yes' && question2 !== 'y' && question2 !== 'no' && question2 !== 'n' && question2 !== 'true' && question2 !== 'false' && question2 !== 't' && question2 !== 'f') {
+    console.log(username + '\'s input \"' + question2 + '\" was invalid for Question 2. Try again, ' + username + '.');
+    alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
+    question2 = prompt('I spend a lot of my free time walking around the woods in the rain looking for things to eat.').toLowerCase();
+  }
 
-while (question2 !== 'yes' && question2 !== 'y' && question2 !== 'no' && question2 !== 'n' && question2 !== 'true' && question2 !== 'false' && question2 !== 't' && question2 !== 'f') {
-  console.log(username + '\'s input \"' + question2 + '\" was invalid for Question 2. Try again, ' + username + '.');
-  alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
-  question2 = prompt('I spend a lot of my free time walking around the woods in the rain looking for things to eat.').toLowerCase();
+  if (question2 === 'yes' || question2 === 'y' || question2 === 'true' || question2 === 't') {
+    console.log(username + ' guessed \"' + question2 + '\" on Question 2 which is CORRECT!');
+    alert('YEP! It\'s true. I love foraging for fungus in the forest every Fall. I also love digging clams and scooping up oysters off the beach \(and eating them raw/alive\)');
+  } else if (question2 === 'no' || question2 === 'n' || question2 === 'false' || question2 === 'f') {
+    console.log(username + ' guessed \"' + question2 + '\" to Question 2 which is INCORRECT!');
+    alert('Wrong! I love foraging for fungus in the forest every Fall. I also love digging clams and scooping up oysters off the beach \(and eating them raw/alive\)');
+  };
 }
-
-if (question2 === 'yes' || question2 === 'y' || question2 === 'true' || question2 === 't') {
-  console.log(username + ' guessed \"' + question2 + '\" on Question 2 which is CORRECT!');
-  alert('YEP! It\'s true. I love foraging for fungus in the forest every Fall. I also love digging clams and scooping up oysters off the beach \(and eating them raw/alive\)');
-} else if (question2 === 'no' || question2 === 'n' || question2 === 'false' || question2 === 'f') {
-  console.log(username + ' guessed \"' + question2 + '\" to Question 2 which is INCORRECT!');
-  alert('Wrong! I love foraging for fungus in the forest every Fall. I also love digging clams and scooping up oysters off the beach \(and eating them raw/alive\)');
-};
+quest2();
 
 // QUESTION 3
 

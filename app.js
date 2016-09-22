@@ -165,3 +165,8 @@ function quest6 () {
   }
 }
 quest6();
+
+function quest7 () {
+  alert('Hawa Rules!!!!!!!');
+}
+quest7();

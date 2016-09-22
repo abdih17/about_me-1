@@ -61,25 +61,28 @@ function quest3 () {
     console.log(username + ' guessed \"' + question3 + '\" to Question 3 which is INCORRECT!');
     alert('Nope, I totally did that! ...and I supported myself on that income for over 15 years.');
   };
+}
 quest3();
 
 // QUESTION 4
+function quest4 () {
+  var question4 = prompt('One time, my uncle and his buddies paddled into sea and killed a gray whale (legally), brought it to shore and cooked it for dinner.').toLowerCase();
 
-var question4 = prompt('One time, my uncle and his buddies paddled into sea and killed a gray whale (legally), brought it to shore and cooked it for dinner.').toLowerCase();
+  while (question4 !== 'yes' && question4 !== 'y' && question4 !== 'no' && question4 !== 'n' && question4 !== 'true' && question4 !== 'false' && question4 !== 't' && question4 !== 'f') {
+    console.log(username + '\'s input \"' + question4 + '\" was invalid for Question 4. Try again, ' + username + '.');
+    alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
+    question4 = prompt('One time, my uncle and his buddies paddled into sea and killed a gray whale (legally), brought it to shore and cooked it for dinner.').toLowerCase();
+  }
 
-while (question4 !== 'yes' && question4 !== 'y' && question4 !== 'no' && question4 !== 'n' && question4 !== 'true' && question4 !== 'false' && question4 !== 't' && question4 !== 'f') {
-  console.log(username + '\'s input \"' + question4 + '\" was invalid for Question 4. Try again, ' + username + '.');
-  alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
-  question4 = prompt('One time, my uncle and his buddies paddled into sea and killed a gray whale (legally), brought it to shore and cooked it for dinner.').toLowerCase();
+  if (question4 === 'yes' || question4 === 'y' || question4 === 'true' || question4 === 't') {
+    console.log(username + ' guessed \"' + question4 + '\" on Question 4 which is CORRECT!');
+    alert('Correct! The Makah tribe was granted whaling rights in our treaty with the US government in 1855, and my uncles succesfully harvested one on May 17, 1999.');
+  } else if (question4 === 'no' || question4 === 'n' || question4 === 'false' || question4 === 'f') {
+    console.log(username + ' guessed \"' + question4 + '\" to Question 4 which is INCORRECT!');
+    alert('That statement was actually true, believe it or not! The Makah tribe was granted whaling rights in our treaty with the US government in 1855, and my uncles succesfully harvested one on May 17, 1999.');
+  };
 }
-
-if (question4 === 'yes' || question4 === 'y' || question4 === 'true' || question4 === 't') {
-  console.log(username + ' guessed \"' + question4 + '\" on Question 4 which is CORRECT!');
-  alert('Correct! The Makah tribe was granted whaling rights in our treaty with the US government in 1855, and my uncles succesfully harvested one on May 17, 1999.');
-} else if (question4 === 'no' || question4 === 'n' || question4 === 'false' || question4 === 'f') {
-  console.log(username + ' guessed \"' + question4 + '\" to Question 4 which is INCORRECT!');
-  alert('That statement was actually true, believe it or not! The Makah tribe was granted whaling rights in our treaty with the US government in 1855, and my uncles succesfully harvested one on May 17, 1999.');
-};
+quest4();
 
 // QUESTION 5
 

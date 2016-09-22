@@ -45,22 +45,23 @@ function quest2 () {
 quest2();
 
 // QUESTION 3
+function quest3 () {
+  var question3 = prompt('I dropped out of high school in the 10th grade to start my own business selling screenprinted T-shirts and Sweatshirts.').toLowerCase();
 
-var question3 = prompt('I dropped out of high school in the 10th grade to start my own business selling screenprinted T-shirts and Sweatshirts.').toLowerCase();
+  while (question3 !== 'yes' && question3 !== 'y' && question3 !== 'no' && question3 !== 'n' && question3 !== 'true' && question3 !== 'false' && question3 !== 't' && question3 !== 'f') {
+    console.log(username + '\'s input \"' + question3 + '\" was invalid for Question 3. Try again, ' + username + '.');
+    alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
+    question3 = prompt('I dropped out of high school in the 10th grade to start my own business selling screenprinted T-shirts and Sweatshirts.').toLowerCase();
+  }
 
-while (question3 !== 'yes' && question3 !== 'y' && question3 !== 'no' && question3 !== 'n' && question3 !== 'true' && question3 !== 'false' && question3 !== 't' && question3 !== 'f') {
-  console.log(username + '\'s input \"' + question3 + '\" was invalid for Question 3. Try again, ' + username + '.');
-  alert('To proceed, please answer either: Yes, Y, No, N, True, False, T, or F. \(Your answer is not case sensitive\)');
-  question3 = prompt('I dropped out of high school in the 10th grade to start my own business selling screenprinted T-shirts and Sweatshirts.').toLowerCase();
-}
-
-if (question3 === 'yes' || question3 === 'y' || question3 === 'true' || question3 === 't') {
-  console.log(username + ' guessed \"' + question3 + '\" on Question 3 which is CORRECT!');
-  alert('Yes! It\'s true, and I supported myself on that income for over 15 years.');
-} else if (question3 === 'no' || question3 === 'n' || question3 === 'false' || question3 === 'f') {
-  console.log(username + ' guessed \"' + question3 + '\" to Question 3 which is INCORRECT!');
-  alert('Nope, I totally did that! ...and I supported myself on that income for over 15 years.');
-};
+  if (question3 === 'yes' || question3 === 'y' || question3 === 'true' || question3 === 't') {
+    console.log(username + ' guessed \"' + question3 + '\" on Question 3 which is CORRECT!');
+    alert('Yes! It\'s true, and I supported myself on that income for over 15 years.');
+  } else if (question3 === 'no' || question3 === 'n' || question3 === 'false' || question3 === 'f') {
+    console.log(username + ' guessed \"' + question3 + '\" to Question 3 which is INCORRECT!');
+    alert('Nope, I totally did that! ...and I supported myself on that income for over 15 years.');
+  };
+quest3();
 
 // QUESTION 4
 

@@ -97,14 +97,12 @@ if (question5 === 'yes' || question5 === 'y' || question5 === 'true' || question
 
 var randomNumber = Math.round((Math.random() * 100));
 console.log('The random number is ' + randomNumber);
-var numberGuess = parseInt(prompt('Ok, now guess a number between 1-100.'));
+var numberGuess = parseInt(prompt('Ok, now guess a number between 0-100.'));
 console.log(username + ' guessed the number ' + numberGuess);
-
-
 
 while (isNaN(numberGuess)) {
   console.log(username + '\'s input \"' + numberGuess + '\" was invalid (not a number)');
-  numberGuess = parseInt(prompt('Guess a number between 1-100.'));
+  numberGuess = parseInt(prompt('Guess a number between 0-100.'));
 }
 
 if (numberGuess > randomNumber) {
